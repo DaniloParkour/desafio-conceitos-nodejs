@@ -2,16 +2,14 @@ const express = require("express");
 const cors = require("cors");
 const {uuid, isUuid} = require("uuidv4");
 
-// const { uuid } = require("uuidv4");
-
 const app = express();
 
 app.use(express.json());
 app.use(cors());
 
-//const repositories = [];
+const repositories = [];
 
-const repositories = [
+/*const repositories = [
   {
     "id": "4e44d535-a3f0-40e3-941c-33a3429f106e",
     "title": "React Native Game",
@@ -22,7 +20,7 @@ const repositories = [
     ],
     "likes": 0
   }
-];
+];*/
 
 function validateProjectID(req, res, next) {
   const {id} = req.params;
